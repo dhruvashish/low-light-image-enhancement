@@ -1,0 +1,23 @@
+name: lowlight-benchmark
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pytorch>=2.0.0
+  - torchvision>=0.15.0
+  - pytorch-cuda=11.8
+  - numpy>=1.24.0
+  - pillow>=9.5.0
+  - scipy>=1.10.0
+  - matplotlib>=3.7.0
+  - pandas>=2.0.0
+  - pyyaml>=6.0
+  - tqdm>=4.65.0
+  - pip
+  - pip:
+      - fvcore>=0.1.5
+      - IQA-pytorch>=0.2.0
+      - python-docx>=1.1.0

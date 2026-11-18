@@ -1,0 +1,5 @@
+arch_key,params_m,gflops,test_mean_psnr,test_mean_ssim,best_val_psnr,best_val_ssim,avg_latency_ms,peak_gpu_mb,training_time_min
+encoder_decoder,7.85,12.406,20.9851,0.821537,22.0774,0.856006,5.5,1454.0,56.25
+nafnet_channel,7.88,11.605,19.8325,0.731573,20.734,0.749388,29.21,4134.0,79.02
+nafnet,8.79,11.605,19.7731,0.753171,20.7358,0.785015,25.1,4146.0,78.7
+nafnet_gating,8.96,12.142,18.6234,0.689241,19.7451,0.716787,26.6,4359.4,121.25

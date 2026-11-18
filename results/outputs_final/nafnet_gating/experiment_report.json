@@ -1,0 +1,146 @@
+{
+  "experiment_name": "nafnet_gating_final",
+  "arch_key": "nafnet_gating",
+  "config_path": "configs_final\\config_nafnet_gating.yaml",
+  "total_params": 8963331,
+  "params_m": 8.96,
+  "gflops": 12.142,
+  "avg_latency_ms": 35.73,
+  "std_latency_ms": 15.49,
+  "peak_gpu_mb": 4635.5,
+  "best_epoch": 125,
+  "best_val_psnr": 22.3104,
+  "best_val_ssim": 0.857825,
+  "test_mean_psnr": 21.3854,
+  "test_mean_ssim": 0.821283,
+  "training_time_min": 133.74,
+  "per_image_results": [
+    {
+      "image": "1.png",
+      "psnr": 25.8849,
+      "ssim": 0.8946
+    },
+    {
+      "image": "111.png",
+      "psnr": 19.5221,
+      "ssim": 0.8929
+    },
+    {
+      "image": "146.png",
+      "psnr": 24.7372,
+      "ssim": 0.8829
+    },
+    {
+      "image": "179.png",
+      "psnr": 13.4666,
+      "ssim": 0.6981
+    },
+    {
+      "image": "22.png",
+      "psnr": 26.5451,
+      "ssim": 0.8812
+    },
+    {
+      "image": "23.png",
+      "psnr": 18.67,
+      "ssim": 0.8227
+    },
+    {
+      "image": "493.png",
+      "psnr": 16.7802,
+      "ssim": 0.5982
+    },
+    {
+      "image": "547.png",
+      "psnr": 13.4174,
+      "ssim": 0.7753
+    },
+    {
+      "image": "55.png",
+      "psnr": 17.5344,
+      "ssim": 0.8469
+    },
+    {
+      "image": "665.png",
+      "psnr": 24.5649,
+      "ssim": 0.8126
+    },
+    {
+      "image": "669.png",
+      "psnr": 24.6527,
+      "ssim": 0.8747
+    },
+    {
+      "image": "748.png",
+      "psnr": 25.5776,
+      "ssim": 0.8882
+    },
+    {
+      "image": "778.png",
+      "psnr": 22.9421,
+      "ssim": 0.7667
+    },
+    {
+      "image": "780.png",
+      "psnr": 26.1277,
+      "ssim": 0.7823
+    },
+    {
+      "image": "79.png",
+      "psnr": 20.3575,
+      "ssim": 0.9022
+    }
+  ],
+  "config": {
+    "experiment_name": "nafnet_gating_final",
+    "model": {
+      "arch": "nafnet_gating",
+      "width": 32,
+      "middle_blk_num": 1,
+      "enc_blk_nums": [
+        2,
+        2,
+        4,
+        8
+      ],
+      "dec_blk_nums": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "data": {
+      "train_low": "dataset/LOLdataset/controlled_train/low",
+      "train_high": "dataset/LOLdataset/controlled_train/high",
+      "val_low": "dataset/LOLdataset/controlled_val/low",
+      "val_high": "dataset/LOLdataset/controlled_val/high",
+      "test_low": "dataset/LOLdataset/eval15/low",
+      "test_high": "dataset/LOLdataset/eval15/high",
+      "patch_size": 256
+    },
+    "training": {
+      "epochs": 150,
+      "batch_size": 4,
+      "lr": 0.0002,
+      "weight_decay": 0.0001,
+      "seed": 42,
+      "num_workers": 0,
+      "eval_every": 1,
+      "log_interval": 20,
+      "grad_clip": 1.0,
+      "precision": "bf16",
+      "loss_weights": {
+        "l1": 1.0,
+        "ssim": 0.1,
+        "vgg": 0.05,
+        "yuv": 0.1
+      }
+    },
+    "output": {
+      "checkpoint_dir": "checkpoints_final/nafnet_gating",
+      "results_dir": "outputs_final/nafnet_gating",
+      "log_dir": "logs_final/nafnet_gating"
+    }
+  }
+}

@@ -1,0 +1,56 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Caches & temporary runtime files
+.pytest_cache/
+.coverage
+.cache/
+*.tmp
+*.temp
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+
+# Old upstream folder
+ExpoMamba/
+
+# Large Model Weights & Checkpoints (Exceeds GitHub 100MB per-file limit)
+*.pth
+*.pt
+*.ckpt
+*.bin
+*.onnx
+checkpoints/
+checkpoint/
+
+# Raw dataset images (Dataset is downloaded via data/README.md links; preserve manifest)
+data/LOLdataset/controlled_train/
+data/LOLdataset/controlled_val/
+data/LOLdataset/eval15/
+data/LOLdataset/our485/
+
+# LaTeX build intermediate artifacts (Preserve .tex and .pdf)
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz

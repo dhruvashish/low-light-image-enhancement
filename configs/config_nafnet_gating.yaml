@@ -1,0 +1,43 @@
+experiment_name: nafnet_gating_final
+model:
+  arch: nafnet_gating
+  width: 32
+  middle_blk_num: 1
+  enc_blk_nums:
+  - 2
+  - 2
+  - 4
+  - 8
+  dec_blk_nums:
+  - 2
+  - 2
+  - 2
+  - 2
+data:
+  train_low: data/LOLdataset/controlled_train/low
+  train_high: data/LOLdataset/controlled_train/high
+  val_low: data/LOLdataset/controlled_val/low
+  val_high: data/LOLdataset/controlled_val/high
+  test_low: data/LOLdataset/eval15/low
+  test_high: data/LOLdataset/eval15/high
+  patch_size: 256
+training:
+  epochs: 150
+  batch_size: 4
+  lr: 0.0002
+  weight_decay: 0.0001
+  seed: 42
+  num_workers: 0
+  eval_every: 1
+  log_interval: 20
+  grad_clip: 1.0
+  precision: bf16
+  loss_weights:
+    l1: 1.0
+    ssim: 0.1
+    vgg: 0.05
+    yuv: 0.1
+output:
+  checkpoint_dir: checkpoints/checkpoints_final/nafnet_gating
+  results_dir: results/outputs_final/nafnet_gating
+  log_dir: experiments/logs_final/nafnet_gating
